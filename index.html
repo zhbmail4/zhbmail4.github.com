@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <style media="screen">
+        div{
+            width: 200px;
+            height: 200px;
+            background:red;
+        }
+    </style>
+    <script>
+        function rnd(m,n){
+            return Math.floor(Math.random()*(n-m) + m);
+        }
+        window.onload = ()=>{
+            document.querySelector('div').onclick = ()=>{
+                //document.querySelector('div').style.background = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`;
+                document.querySelector('div').style.background = `rgb(${rnd(0,256)},${rnd(0,256)},${rnd(0,256)})`;
+            };
+        };
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>
